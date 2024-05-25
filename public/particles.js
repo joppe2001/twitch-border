@@ -5,10 +5,13 @@ document.addEventListener('DOMContentLoaded', function () {
     for (let i = 0; i < numParticles; i++) {
         const particle = document.createElement('div');
         particle.className = 'particle';
+        const size = Math.random() * 3 + 2; // Varying sizes between 2px and 5px
+        particle.style.width = `${size}px`;
+        particle.style.height = `${size}px`;
         particle.style.top = `${Math.random() * 100}%`;
         particle.style.left = `${Math.random() * 100}%`;
-        particle.style.animationDelay = `${Math.random() * 5}s`;
-        particle.style.animationDuration = `${Math.random() * 10 + 5}s`;
+        particle.style.animationDelay = `${Math.random() * 3}s`;
+        particle.style.animationDuration = `${Math.random() * 10 + 3}s`;
         particleContainer.appendChild(particle);
     }
 });
@@ -18,12 +21,10 @@ const style = document.createElement('style');
 style.innerHTML = `
 .particle {
     position: absolute;
-    width: 5px;
-    height: 5px;
-    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(0,212,255,1) 100%);
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,255,255,0.5) 100%);
     border-radius: 50%;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.5);
-    animation: particle-move 10s linear infinite;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.7), 0 0 10px rgba(255, 255, 255, 0.5);
+    animation: particle-move 2s linear infinite;
 }
 
 @keyframes particle-move {
