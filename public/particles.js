@@ -32,7 +32,7 @@ style.innerHTML = `
         opacity: 1;
     }
     100% {
-        transform: translateY(-100vh) translateX(50vw);
+        transform: translateY(-150%) translateX(100%);
         opacity: 0;
     }
 }
