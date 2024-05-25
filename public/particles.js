@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     const particleContainer = document.getElementById('particles');
     const numParticles = 100;
-    const numShootingStars = 5;
+    const numShootingStars = 2;
     
     for (let i = 0; i < numParticles; i++) {
         const particle = document.createElement('div');
@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
         particle.style.left = `${Math.random() * 100}%`;
         particle.style.animationDelay = `${Math.random() * 5}s`;
         particle.style.animationDuration = `${Math.random() * 10 + 5}s`;
+        particle.style.opacity = Math.random() * 0.5 + 0.5; // Varying opacity
         particleContainer.appendChild(particle);
     }
     
@@ -22,6 +23,9 @@ document.addEventListener('DOMContentLoaded', function () {
         shootingStar.style.top = `${Math.random() * 100}%`;
         shootingStar.style.left = `${Math.random() * 100}%`;
         shootingStar.style.animationDelay = `${Math.random() * 10}s`;
+        shootingStar.style.animationDuration = '3s';
+        shootingStar.style.width = `${Math.random() * 2 + 1}px`; // Varying widths between 1px and 3px
+        shootingStar.style.height = `${Math.random() * 100 + 50}px`; // Varying heights between 50px and 150px
         particleContainer.appendChild(shootingStar);
     }
 });
@@ -50,8 +54,6 @@ style.innerHTML = `
 
 .shooting-star {
     position: absolute;
-    width: 2px;
-    height: 100px;
     background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
     border-radius: 50%;
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.7), 0 0 40px rgba(255, 255, 255, 0.5);
