@@ -20,8 +20,8 @@ body, html {
 .border {
     width: 100%;
     height: 100%;
-    border: 20px solid transparent;
-    border-image: linear-gradient(45deg, #ff00cc, #3333ff, #ff0000);
+    border: 10px solid transparent;
+    border-image: linear-gradient(45deg, #aa00cc, #2222aa, #aa0000);
     border-image-slice: 1;
     border-radius: 20px;
     box-sizing: border-box;
@@ -32,34 +32,34 @@ body, html {
 
 @keyframes border-flow {
     0% {
-        border-image-source: linear-gradient(45deg, #ff00cc, #3333ff, #ff0000);
+        border-image-source: linear-gradient(45deg, #aa00cc, #2222aa, #aa0000);
     }
     50% {
-        border-image-source: linear-gradient(45deg, #ff0000, #ff00cc, #3333ff);
+        border-image-source: linear-gradient(45deg, #aa0000, #aa00cc, #2222aa);
     }
     100% {
-        border-image-source: linear-gradient(45deg, #ff00cc, #3333ff, #ff0000);
+        border-image-source: linear-gradient(45deg, #aa00cc, #2222aa, #aa0000);
     }
 }
 
 @keyframes border-glow {
     0% {
-        box-shadow: 0 0 20px rgba(255, 0, 204, 0.7), 0 0 40px rgba(255, 0, 204, 0.5);
+        box-shadow: 0 0 10px rgba(170, 0, 204, 0.7), 0 0 20px rgba(170, 0, 204, 0.5);
     }
     50% {
-        box-shadow: 0 0 20px rgba(51, 51, 255, 0.7), 0 0 40px rgba(51, 51, 255, 0.5);
+        box-shadow: 0 0 10px rgba(34, 34, 170, 0.7), 0 0 20px rgba(34, 34, 170, 0.5);
     }
     100% {
-        box-shadow: 0 0 20px rgba(255, 0, 0, 0.7), 0 0 40px rgba(255, 0, 0, 0.5);
+        box-shadow: 0 0 10px rgba(170, 0, 0, 0.7), 0 0 20px rgba(170, 0, 0, 0.5);
     }
 }
 
 .center {
-    width: calc(100% - 80px);
-    height: calc(100% - 80px);
+    width: calc(100% - 40px);
+    height: calc(100% - 40px);
     position: absolute;
-    top: 40px;
-    left: 40px;
+    top: 20px;
+    left: 20px;
     border-radius: 10px;
     background: transparent;
 }
