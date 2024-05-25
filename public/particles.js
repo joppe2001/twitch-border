@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     const particleContainer = document.getElementById('particles');
-    const numParticles = 50;
+    const numParticles = 100;
     
     for (let i = 0; i < numParticles; i++) {
         const particle = document.createElement('div');
@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
         particle.style.top = `${Math.random() * 100}%`;
         particle.style.left = `${Math.random() * 100}%`;
         particle.style.animationDelay = `${Math.random() * 5}s`;
+        particle.style.animationDuration = `${Math.random() * 10 + 5}s`;
         particleContainer.appendChild(particle);
     }
 });
@@ -19,7 +20,7 @@ style.innerHTML = `
     position: absolute;
     width: 5px;
     height: 5px;
-    background: white;
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(0,212,255,1) 100%);
     border-radius: 50%;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.5);
     animation: particle-move 10s linear infinite;
