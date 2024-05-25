@@ -14,7 +14,7 @@ body, html {
     height: 70%;
     transform: translate(-50%, -50%);
     overflow: hidden;
-    pointer-events: none; /* Ensure the container does not interfere with other elements */
+    pointer-events: none;
 }
 
 .border {
@@ -26,7 +26,7 @@ body, html {
     border-radius: 20px;
     box-sizing: border-box;
     position: relative;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    background: rgba(0, 0, 0, 0.5);
     animation: border-flow 5s linear infinite, border-glow 3s infinite alternate;
 }
 
@@ -90,14 +90,13 @@ body, html {
 
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
 
-/* Particle styles */
 #particles {
     position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
-    z-index: -1; /* Ensure particles are behind the border */
+    z-index: -1;
 }
 
 .particle {
@@ -115,27 +114,6 @@ body, html {
     }
     100% {
         transform: translateY(-150%) translateX(100%);
-        opacity: 0;
-    }
-}
-
-.shooting-star {
-    position: absolute;
-    width: 2px;
-    height: 100px;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
-    border-radius: 50%;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7), 0 0 40px rgba(255, 255, 255, 0.5);
-    animation: shooting-star-move 3s linear infinite;
-}
-
-@keyframes shooting-star-move {
-    0% {
-        transform: translateY(-100vh) translateX(-100vw);
-        opacity: 1;
-    }
-    100% {
-        transform: translateY(100vh) translateX(100vw);
         opacity: 0;
     }
 }
