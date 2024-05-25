@@ -27,7 +27,7 @@ body, html {
     box-sizing: border-box;
     position: relative;
     background: rgba(0, 0, 0, 0.5);
-    animation: border-flow 5s linear infinite, border-glow 3s infinite alternate;
+    animation: border-flow 3s linear infinite, border-glow 3s infinite alternate;
 }
 
 @keyframes border-flow {
